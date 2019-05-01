@@ -1,0 +1,117 @@
+
+<!--Ingredient list builder-->
+
+    <div class="row justify-content-center searchBox">
+
+        <div class="card col-12 col-md-8">
+
+            <div class="card-header">
+
+                <h5 class="card-title">Recipe Search</h4>
+
+                <h6 class="card-subtitle mb-2">Add your list of ingredients below.</h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <ul class="list-group list-group-flush">
+
+                    <li ng-repeat="x in ingredients" class="list-group-item d-flex justify-content-between align-items-center">{{x}}<span ng-click="removeIngredient($index)" class="removeX">x</span></li>
+
+                </ul>
+
+            </div>
+
+            <div class="card-footer container">
+
+                <div class="input-group row justify-content-center">
+
+                    <input ng-model="addIn">
+
+                    <div class="input-group-append">
+
+                        <button ng-click="addIngredient()" class="btn inListBtn">Add</button>
+
+                    </div>
+
+                </div>
+                <!--Diet and Health Restrictions-->
+                <div class="form-row" id="searchFilters">
+                <div class="form-group col-12 col-lg-6">
+                    <label for="dietSelect">Diet Filters:</label>
+                    <select ng-model="dietSelect" class="form-control" id="dietSelect">
+                        <option value=""></option>
+                        <option value="balanced">Balanced</option>
+                        <option value="high-fiber">High Fiber</option>
+                        <option value="high-protein">High Protein</option>
+                        <option value="low-carb">Low Carb</option>
+                        <option value="low-fat">Low Fat</option>
+                    </select>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label for="healthSelect">Health Filters:</label>
+                    <select ng-model="healthSelect" class="form-control" id="healthSelect">
+                        <option value=""></option>
+                        <option value="dairy-free">Dairy Free</option>
+                        <option value="gluten-free">Gluten Free</option>
+                        <option value="kosher">Kosher</option>
+                        <option value="peanut-free">Peanut Free</option>
+                        <option value="shellfish-free">Shellfish Free</option>
+                        <option value="soy-free">Soy Free</option>
+                        <option value="tree-nut-free">Tree Nut Free</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+                </div>
+                <div class="row justify-content-center"><p class="errorMsgText">{{errorMsg}}</p></div>
+                <div class="row justify-content-center">
+                    <button ng-click="recipeSearch()" class="btn btn-lg recipeSearchBtn">Search Recipes</button>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+        <div ng-show="showErr" class="text-center" id="message">{{ErrMessage}}</div>
+    </section>
+    </div>
+
+    <!--Recipes Display, will expand with more data displayed -> allow on click: open new recipe page-->
+    <section class="container bodyContent">
+    <div class="row justify-content-between recipeTable">
+
+        <div ng-show="showLoader" class="loader"></div>
+        <div ng-show="showRecipeTable" class="table-responsive">
+        <table class="table table-light table-striped">
+            <thead class="thead-dark">
+            <tr>
+
+                <th colspan="2" ng-click="selectedOrder('label')">Recipe</th>
+
+                <th ng-click="selectedOrder('ingredients.length')"># Ingredients</th>
+
+                <th ng-click="selectedOrder('yield')">Servings</th>
+
+                <th ng-click="selectedOrder('calories')">Calories</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in recipes | orderBy:sortOrder" ng-click="goToRecipe(x)" class="recipeDisplayRows">
+
+                <td><img ng-src="{{x.image}}"></td>
+
+                <td>{{x.label}}</td>
+
+                <td>{{x.ingredients.length}}</td>
+
+                <td>{{x.yield}}</td>
+
+                <td>{{x.calories | number : 0}}</td> <!-- truncates the number to be integer-valued-->
+
+            </tr>
+            </tbody>
+        </table>
+        </div>

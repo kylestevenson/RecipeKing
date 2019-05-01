@@ -1,0 +1,118 @@
+/* Pallete: #20BF55 #0B4F6C #01BAEF #FBFBFF #757575 */
+
+
+th {
+    cursor: pointer;
+}
+body {
+
+    font-family: Verdana, Geneva, sans-serif;
+
+}
+
+.bodyContent {
+
+    margin-top: 30px;
+
+}
+
+@media screen and (min-width: 992px){
+
+    .card {
+
+        max-width: 26rem;
+
+    }
+
+}
+
+.card {
+
+    box-shadow: 0 0 2px 0 rgb(143, 143, 143), 0 2px 10px 0 rgb(143, 143, 143);
+
+}
+
+.card-body {
+
+    padding-top: 3px;
+
+    padding-bottom: 3px;
+
+}
+
+
+
+.inListBtn {
+
+    background-color: #01BAEF;
+
+    color: #FBFBFF;
+
+    border-color: #01BAEF;
+
+    min-width: 44px;
+
+    margin-left: 5px;
+
+}
+
+.inListBtn:hover {
+
+    background-color: #0B4F6C;
+
+}
+
+.removeX {
+
+    cursor: pointer;
+
+}
+
+.errorMsgText {
+
+    color: rgb(196, 16, 25);
+
+}
+
+.recipeSearchBtn {
+
+    background-color: #01BAEF;
+
+    color: #FBFBFF;
+
+    border-color: #01BAEF;
+
+    margin: 10px;
+
+}
+
+.recipeSearchBtn:hover {
+
+    background-color: #0B4F6C;
+
+}
+
+.recipeTable {
+
+    margin-top: 30px;
+
+}
+.loader {
+    margin: 0 auto;
+    border: 16px solid #01BAEF;
+    border-radius: 50%;
+    border-top: 16px solid #343434;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

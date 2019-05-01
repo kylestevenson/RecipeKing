@@ -1,0 +1,23 @@
+Test Case ID: UC-1
+Test Designed by: Shayne Smither
+Test Excuted by: Jiayu Xia
+Module Name: Recipe Search Screen
+Test Title: Ingredients List Test
+Description: Test ingredients list corresponding to the ingredients input by the user
+Preconditions: The web page has loaded correctly with all UI elements displaying properly
+Test Steps:
+1.Input the same ingredient name to the recipe search textfield and click add button
+Test Data: "Chicken" "Chicken"
+Expected Result: None of the duplicated ingredient name should be displayed more than once.
+Actual Result: As Expected
+Status: Pass
+2.Delete all the ingredient names added in the list
+Expected Result: The list of input ingredients is cleaned up.
+Actual Result: As Expected
+Status: Pass
+3.Input ingredient names to the recipe search textfield and click add button
+Test Data: "Chicken" "Rice" "Spice"
+Expected Result: A list of input ingredients showed below.
+Actual Result: As Expected
+Status: Pass
+Postconditions: The system returns a list of recipes corresponding to the ingredients input by the user

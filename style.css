@@ -1,0 +1,195 @@
+/* Pallete: #20BF55 #0B4F6C #01BAEF #FBFBFF #757575
+            #51951c */
+html,body {
+    min-height: 100%;
+}
+.bg {
+    background-image: url("images/foodBG.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@media only screen and (max-device-width: 1366px) {
+    .bg {
+        background-attachment: scroll;
+    }
+}
+#searchFilters {
+    margin-top: 10px;
+}
+#message {
+    margin-top: 20px;
+}
+section {
+    padding-bottom: 50px;
+}
+.list-group-item {
+    background-color: transparent;
+}
+.navbar {
+    background-color: rgba(36, 36, 36, 1);
+}
+.navbar img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+th {
+    cursor: pointer;
+    color: #FBFBFF;
+}
+body {
+
+    font-family: Verdana, Geneva, sans-serif;
+
+}
+.nutritionBox {
+    background-color: #343434;
+    color: #FBFBFF;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.recipeDisplayRows {
+    cursor: pointer;
+}
+.recipeDisplayRows:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recipePageDisplay {
+    background-color: rgb(231, 231, 231);
+    padding: 20px;
+}
+.bodyContent {
+
+    margin-top: 30px;
+
+}
+td {
+    color: #343434;
+}
+table img {
+    width: 80px;
+    height: 80px;
+}
+@media screen and (min-width: 768px){
+    table img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (min-width: 992px){
+    table img {
+        width: 150px;
+        height: 150px;
+    }
+}
+.recipePageContent {
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 992px){
+
+    .card {
+
+        max-width: 26rem;
+
+    }
+
+}
+
+.card {
+
+    box-shadow: 0 0 2px 0 rgb(143, 143, 143), 0 2px 10px 0 rgb(143, 143, 143);
+    color: #343434;
+
+}
+
+.card-body {
+
+    padding-top: 3px;
+
+    padding-bottom: 3px;
+
+}
+
+
+
+.inListBtn {
+
+    background-color: #51951c;
+
+    color: #FBFBFF;
+
+    border-color: #51951c;
+
+    min-width: 44px;
+
+    margin-left: 5px;
+
+}
+
+.inListBtn:hover {
+
+    background-color: #FBFBFF;
+    color: #51951c;
+
+}
+
+.removeX {
+
+    cursor: pointer;
+
+}
+
+.errorMsgText {
+
+    color: rgb(196, 16, 25);
+
+}
+
+.recipeSearchBtn {
+
+    background-color: #51951c;
+
+    color: #FBFBFF;
+
+    border-color: #51951c;
+
+    margin: 10px;
+
+}
+
+.recipeSearchBtn:hover {
+
+    background-color: #FBFBFF;
+    color: #51951c;
+
+}
+
+.recipeTable {
+
+    margin-top: 30px;
+
+}
+.loader {
+    margin: 0 auto;
+    border: 16px solid #FBFBFF;
+    border-radius: 50%;
+    border-top: 16px solid #51951c;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

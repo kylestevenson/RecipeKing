@@ -1,0 +1,18 @@
+Test Case ID: UC-2
+Test Designed by: Shayne Smither
+Test Excuted by: Jiayu Xia
+Module Name: Recipe Search Screen
+Test Title: Recipe Search Test
+Description: Generate a list of recipes from a database based off of a provided list of ingredients
+Preconditions: A list of ingredients is provided
+Test Steps:
+1.Get the list of ingredients in the recipe search area and click on Search Recipe Button
+Test Data: "Chicken" "Rice" "Spice"
+Expected Result: A list of recipes based off of the provided list of ingredients showed below.
+Actual Result: As Expected
+Status: Pass
+2.Click on the headers of columns.
+Expected Result: The list of recipes should be sorted in the chosen column by number and alphabet.
+Actual Result: As Expected
+Status: Pass
+Postconditions: The system returns a list of recipes corresponding to the ingredients input by the user
